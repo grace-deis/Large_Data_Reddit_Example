@@ -71,7 +71,7 @@ python3 json_to_csv.py "/mnt/hum01-home01/n54183gd/reddit_post/results/sample_js
 This code can be run from the command line as it takes only a few seconds
 
 SAMPLE_CSV.PY Description
-________________
+----------
 
 This code takes a random sample of the generated .csv file. 
 
