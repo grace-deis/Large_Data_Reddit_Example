@@ -1,8 +1,8 @@
+Context
+----------
 This is code I wrote as a research assistant working with a large amount of Reddit data. The goal was to filter through the data if they mentioned certain key phrases such as "pensions" and map how coversations around the topic changed over time. As we were using university computers, not all Python packages were available to us.
 
-FILTER_CODE.PY
-
-Description
+FILTER_CODE.PY Description
 ----------
 This code processes Reddit submissions and comments. It reads .zst files (searching by date). Then, it filters submissions by keyword and date range, finds related comments, and saves everything in a JSON structure. Comments include a reply level field.
 
@@ -39,7 +39,6 @@ The resulting JSON file will contain a list of filtered Reddit submissions. Each
 - post_date
 - post_title
 - post_text
-
 - comment_id
 - comment_url
 - comment_date
@@ -50,11 +49,8 @@ The resulting JSON file will contain a list of filtered Reddit submissions. Each
 - number_of_replies
 - reply_level: 1 for direct comments, 1+ for nested replies (Currently the code defaults to only preserving level 1 replies)
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-JSON_TO_CSV.PY
-
-Description
-________________
+JSON_TO_CSV.PY Description
+----------
 
 This code turns the json file created above into a csv file with the headings: "post_id", "post_url", "post_date", "post_title", "post_text", "comment_id", "comment_url", "comment_date", "comment_votes", "comment_body", "comment_has_multimedia", "comment_has_links", "number_of_replies", "reply_level". 
 
@@ -74,11 +70,7 @@ python3 json_to_csv.py "/mnt/hum01-home01/n54183gd/reddit_post/results/sample_js
 
 This code can be run from the command line as it takes only a few seconds
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SAMPLE_CSV.PY
-
-Description
+SAMPLE_CSV.PY Description
 ________________
 
 This code takes a random sample of the generated .csv file. 
